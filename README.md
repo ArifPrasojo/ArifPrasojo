@@ -6,16 +6,6 @@
 
 ## Statistik
 
-
-
-<p align="center">
-
-<img src="https://github-readme-stats.vercel.app/api?username=arifprasojo&show_icons=true&theme=midnight-purple">
-
-</p>
-
-
-
 <p align="center">
 
 <img src="https://github-readme-streak-stats.herokuapp.com/?user=arifprasojo&theme=midnight-purple&hide_border=false">
