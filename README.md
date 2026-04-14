@@ -9,5 +9,6 @@
 <p align="center">
 <img src="https://github-readme-streak-stats.herokuapp.com/?user=arifprasojo&theme=midnight-purple&hide_border=false">
 </p>
-
+<p align="center">
 <img src="https://github-readme-stats-eight-theta.vercel.app/api?username=arifprasojo&show_icons=true&theme=react" alt="GitHub Stats" />
+</p>
