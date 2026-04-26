@@ -98,6 +98,18 @@ export default function DocumentView({ document }: { document: any }) {
     }
   };
 
+  const handleDownload = () => {
+    if (!activeSummary) return;
+    
+    const element = window.document.createElement("a");
+    const file = new Blob([activeSummary.content], { type: 'text/plain' });
+    element.href = URL.createObjectURL(file);
+    element.download = `Ringkasan_${activeSummary.type}_${document.originalName}.txt`;
+    window.document.body.appendChild(element);
+    element.click();
+    window.document.body.removeChild(element);
+  };
+
   return (
     <div className="min-h-screen bg-gray-50 flex flex-col">
       {/* Top Navigation */}
@@ -238,8 +250,9 @@ export default function DocumentView({ document }: { document: any }) {
                       </button>
                       <div className="w-px h-4 bg-gray-200 mx-1"></div>
                       <button 
+                        onClick={handleDownload}
                         className="flex items-center space-x-2 px-3 py-2 text-sm font-medium text-gray-600 hover:text-indigo-600 hover:bg-white hover:shadow-sm rounded-lg transition-all"
-                        title="Unduh PDF"
+                        title="Unduh Ringkasan (.txt)"
                       >
                         <Download className="w-4 h-4" />
                         <span className="hidden sm:inline">Unduh</span>
